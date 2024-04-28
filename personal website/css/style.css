@@ -1,0 +1,66 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Use viewport height */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+    color: black;
+}
+
+header nav ul li a {
+    color: white; /* Text color */
+    background-color: blue; /* Background color */
+    padding: 10px 20px; /* Padding around the text */
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+header nav ul li a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.profile-image {
+    width: 276px;
+    height: 401px;
+    border-radius: 70%;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+footer {
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
