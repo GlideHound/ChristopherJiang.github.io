@@ -13,13 +13,13 @@
             <img src="images/contact image.webp" alt="Contact" class="profile-image">
             <p>Email: christjiang1492@gmail.com</p>
             <p>Phone: +1 (289) 885-6125</p>
-            <form>
+            <form id="contact-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </section>
@@ -27,6 +27,27 @@
     <footer>
         <p>Copyright © 2023 Christopher Jiang. All rights reserved.</p>
     </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("M7I2nvX6lUiwTL1WM"); // Replace 'your-user-id' with your actual EmailJS user ID
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_ec21tt8', 'template_vec6nrj', this)
+                    .then(function() {
+                        alert('Message sent successfully!');
+                        window.location.reload(); // Refresh the page to clear the form
+                    }, function(error) {
+                        alert('Failed to send the message, please try again.');
+                    });
+            });
+        };
+    </script>
 </body>
 </html>
-
