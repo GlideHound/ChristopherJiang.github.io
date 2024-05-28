@@ -67,3 +67,8 @@ img {
     height: auto;
     border-radius: 4px;
 }
+
+/* Hyperlink styles */
+.link {
+    margin-right: 20px;
+}
