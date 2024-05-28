@@ -52,6 +52,14 @@ header nav ul li a:hover {
     border-radius: 70%;
 }
 
+.square-image {
+    width: 320px; /* You can adjust this value to fit your page layout */
+    height: 501px; /* Same value as width to make it square */
+    margin: 10px; /* Optional: adjust margin as needed */
+    border-radius: 5px; /* Optional: to slightly round the corners, adjust as needed or remove for sharp corners */
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+}
+
 main {
     padding: 20px;
     text-align: center;
